@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .container {
+            margin-left: 150px;
+            margin-right: 150px
+        }
+
+        .heading {
+            font-size: 56px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+            justify-content: center;
+        }
+
+        .heading2 {
+            font-size: 30px;
+            color: rgb(161, 158, 158);
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .link {
+            display: flex;
+            height: 300px;
+            width: 250px;
+            background-color: rgb(138, 216, 241);
+        }
+
+        .sectionA a:hover {
+            text-decoration: none;
+        }
+
+        footer {
+            background-color: rgb(44, 3, 3);
+        }
+
+        .content2 {
+            position: relative;
+        }
+
+        .content2 h2 {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            font-size: 60px;
+            margin-left: 40%;
+            margin-top: -50px;
+
+        }
+
+        .content2 h2:nth-child(1) {
+            color: transparent;
+            -webkit-text-stroke: 2px rgb(255, 234, 177);
+        }
+
+        .content2 h2:nth-child(2) {
+            color: rgb(255, 234, 177);
+            animation: animate1 5s ease-in-out infinite;
+        }
+
+
+        .verymain {
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(44, 3, 3);
+        }
+
+        .mainlog {
+            display: flex;
+            justify-content: space-around;
+            width: 50%;
+            margin-top: 27px;
+        }
+
+        .faltu {
+            height: 100px;
+            width: auto;
+        }
+
+        .log1 ul {
+            list-style: none;
+            color: rgb(103, 196, 224);
+            font-size: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+            line-height: 35px;
+        }
+
+        .log1 ul li:hover {
+            text-decoration: underline;
+        }
+
+        .log2 ul li:hover {
+            color: rgb(49, 49, 49);
+        }
+
+        .log2 ul li {
+            list-style: none;
+            font-weight: lighter;
+            color: rgb(255, 255, 255);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            line-height: 25px;
+            font-size: 17px;
+            text-decoration: none;
+        }
+
+        .log2 ul a {
+            text-decoration: none;
+        }
+
+        .log {
+            margin-left: 30px;
+        }
+
+        .log h3 {
+            font-size: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: white;
+
+        }
+
+        .log input {
+            outline: none;
+            border: none;
+            width: 300px;
+            height: 1px;
+            padding: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 15px;
+            border-radius: 5px;
+        }
+
+        .log button {
+            padding: 10px;
+            background-color: transparent;
+            border: 2px solid rgb(255, 255, 122);
+            color: rgb(255, 202, 55);
+            border-radius: 5px;
+            width: 100px;
+        }
+
+        .sectionB {
+            margin-left: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="position: sticky; top: 0;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">FOODZEE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="FEEfoodzee.html">Home</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Recipe
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="breakfast.html">Breakfast</a></li>
+                            <li><a class="dropdown-item" href="lunch.html">Lunch</a></li>
+                            <li><a class="dropdown-item" href="dinner.html">Dinner</a></li>
+                            <li><a class="dropdown-item" href="dessert.html">Dessert</a></li>
+                        </ul>
+
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            In The Kitchen
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="A-Z.html">A-Z Guide To Cooking Terms</a></li>
+                            <li><a class="dropdown-item" href="#">Tips & Techniques</a></li>
+                            <li><a class="dropdown-item" href="#">Ingrident Guides</a></li>
+                        </ul>
+
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Table Talk
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="A-Z.html">Most Recent</a></li>
+                            <li><a class="dropdown-item" href="#">News & Trends</a></li>
+                            <li><a class="dropdown-item" href="#">Groceries</a></li>
+                        </ul>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="fakevideo.html">Video Page</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="head">
+            <div class="heading">
+                An A-Z Guide to Cooking Terms and Definitions</div>
+            <br>
+            <div class="heading2">
+                Ever wondered the difference between sautéing and stir-frying? Or a skillet and a saucepan? Our cooking
+                terms glossary to the rescue!
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="article" style="font-size: 22px; border: 3px dotted brown; width: 180px;">
+            IN THIS ARTICLE
+        </div>
+        <div class="link">
+            <div class="sectionA" style="margin-left: 30px;">
+                <a href="#a" style="text-decoration: none; color:black;font-weight:bold">A</a>
+                <br>
+                <br>
+                <a href="#b"style="text-decoration: none; color:black;font-weight:bold">B</a>
+                <br>
+                <br>
+                <a href="#c"style="text-decoration: none; color:black;font-weight:bold">C</a>
+                <br>
+                <br>
+                <a href="#d"style="text-decoration: none; color:black;font-weight:bold">D</a>
+                <br>
+                <br>
+                <a href="#e"style="text-decoration: none; color:black;font-weight:bold">E</a>
+                <br>
+                <br>
+                <a href="#f"style="text-decoration: none; color:black;font-weight:bold">F</a>
+            </div>
+            <div class="sectionB">
+
+                <a href="#g"style="text-decoration: none; color:black;font-weight:bold">G</a>
+                <br>
+                <br>
+                <a href="#h"style="text-decoration: none; color:black;font-weight:bold">H</a>
+                <br>
+                <br>
+                <a href="#i"style="text-decoration: none; color:black;font-weight:bold">I</a>
+                <br>
+                <br>
+                <a href="#f"style="text-decoration: none; color:black;font-weight:bold">J</a>
+                <br>
+                <br>
+                <a href="#g"style="text-decoration: none; color:black;font-weight:bold">K</a>
+                <br>
+                <br>
+                <a href="#h"style="text-decoration: none; color:black;font-weight:bold">L</a>
+
+
+
+
+            </div>
+           
+        </div>
+        <a href="#">Read More...</a>
+
+        <br><br>
+        <div class="text" style="font-size: 22px; width: 700px;">
+            Every craft has its own language, and that includes cooking. Recipes can be full of words that you don’t
+            hear in everyday conversation. Here at Simply Recipes, we try to use regular language as much as possible,
+            but we can’t help but slip into recipe speak from time to time.
+
+            Whether you’re new to cooking and it’s all a mystery, or you’ve been cooking for years and recently stumbled
+            across an unfamiliar cooking term, look it up below and add it to your personal storehouse of cooking terms!
+            We'll also continue adding definitions as we think of them.
+
+            You know how new words are: once you learn one, you tend to spot it again and again.
+            <br><br>
+            <div id="a">
+                <div class="letter" style="font-size: 27px;">A</div>
+                <br>
+                <b>Air fry</b>: To cook in a quick-heating countertop convection oven. Air frying is not actually
+                frying.
+
+                <br>
+                <b> Aromatics</b>: Ingredients such as herbs, spices, and vegetables used to add flavor and aroma to
+                dishes.
+                <a href="#">Read More</a>
+            </div>
+            <br><br>
+            <div id="b">
+                <div class="letter" style="font-size: 27px;">B</div><br>
+                <b>Bake</b>: To cook in an oven, usually at moderate temperatures (around 350°F).
+                <br>
+                <b>Baking sheet</b>: A large, flat metal sheet such as a cookie sheet or sheet pan. Some are totally
+                flat; some have rims.
+                <br>
+                <b>Batter</b>: A pourable mixture prior to baking, often used for making pancakes, muffins, and quick
+                breads.
+                <br>
+                <b>Beat</b>: To mix ingredients vigorously.
+                <br>
+                <b>Bechamel</b>: A sauce made from a cooked flour-and-butter paste (a roux) and thickened with milk.
+                <br>
+                <b>Blanch</b>: To quickly boil foods, often vegetables. Blanching often only partially cooks foods.
+                <br>
+                <b>Blender, high-speed</b>: A blender with a powerful motor and pitcher made of sturdy, shatterproof
+                plastic. High-speed blenders can smoothly puree foods that regular blenders can’t.
+
+                <a href="#">Read More</a>
+            </div>
+            <br><br>
+            <img src="add.webp" alt="" height="400" width="700">
+            <div class="chef" style="font-size: 18px; color: rgba(31, 30, 30, 0.308);">chef's Knife, image:Alison Bickel
+            </div>
+            <br><br>
+            <div id="c">
+                <div class="letter" style="font-size: 27px;">C</div><br>
+                <b>Casserole</b>: A sturdy baking dish or pan.
+                <br>
+                <b>Chiffonade</b>: To shred leafy foods, such as lettuce or herbs, very finely with a knife.
+                <br>
+                <b>Chef’s knife</b>: An all-purpose knife, typically with a blade that's 6-10” long.
+                <br>
+
+
+                <b>Colander</b>: A perforated metal or plastic bowl with handles used for draining foods cooked in
+                liquid.
+                <br>
+                <b>Convection oven</b>: An oven with fans that circulate air for even browning and oftentimes faster
+                cooking.
+                <br>
+                <b>Cookie scoop</b>: A metal tool shaped like an ice cream scoop that’s used to portion cookie dough, as
+                well as other scoopable foods.
+                <br>
+                <b>Cooling rack</b>: A sturdy wire rack to set hot baked goods on so they cool evenly.
+                <br>
+                <b>Cream</b>: To beat solid fat (often shortening or butter) with sugar until lightened in texture and
+                very well combined.
+                <br>
+                <b>Cross-contaminate</b>: To spread dangerous bacteria from one food, such as raw chicken, to another,
+                such as raw vegetables, by using unwashed cooking tools and surfaces for preparing the same foods.
+                <a href="#">Read More</a>
+            </div>
+            <br><br>
+            <img src="add2.webp" alt="" height="400" width="700">
+            <div class="chef" style="font-size: 18px; color: rgba(31, 30, 30, 0.308);">Dry ingredients.Image:Kalisa
+                Marie Martin</div>
+            <br><br>
+            <div id="d">
+                <div class="letter" style="font-size: 27px;">D</div><br>
+                <b>Deep fry</b>: To cook food by fully immersing it in hot fat.
+                <br>
+                <b>Deglaze</b>: To add liquid, often stock or alcohol, to a pan or pot after cooking meat or vegetables
+                in a small amount of fat. Deglazing releases the flavorful browned buildup from the bottom of the pan;
+                often the liquid added is nearly cooked off until a thick, glaze-like mixture forms.
+                <br>
+                <b>Dice</b>: To chop food evenly into small pieces or cubes. Fine dice is 1/4”, medium dice is 1/2”, and
+                large dice is 3/4”.
+                <br>
+                <b>Divided</b>: When a recipe calls for an ingredient that is divided, you add the same ingredient at
+                two or more different steps of the recipe.
+                <br>
+                <b>Dough</b>: A cohesive unbaked mixture of flour and other ingredients that’s too stiff to pour, and
+                thicker than a batter.
+                <br>
+                <b>Drippings</b>: The fat and liquid that drips out of meat as it roasts or browns.
+                <a href="#">Read More</a>
+            </div>
+            <br><br>
+            <div id="e">
+                <div class="letter" style="font-size: 27px;">E</div><br>
+                <b>Emulsion</b>: A homogenous mixture of two items, such as water and oil, that do not typically mix. In
+                an emulsion, tiny droplets of one liquid are suspended in the other. Mayonnaise, hollandaise, and
+                ganache are all emulsions. Improperly made, an emulsion can “break” and separate back into two distinct
+                liquids
+
+            </div>
+            <br><br>
+            <div id="f">
+                <div class="letter" style="font-size: 27px;">F</div><br>
+                <b>Fold</b>: To gently mix one substance into another using a folding motion with a silicone or rubber
+                spatula.
+                <br>
+                <b>Food processor</b>: An appliance for pureeing, slicing, grating, and chopping food.
+                <a href="#">Read More</a>
+            </div>
+            <br><br>
+            <div id="g">
+                <div class="letter" style="font-size: 27px;">G</div><br>
+                <b>Ganache</b>: A smooth mixture of melted chocolate and/or butter. A liquid ganache may be used as a
+                sauce, or to glaze a cake; hardened ganache can be rolled or cut to form truffles, or whipped to make
+                dessert fillings.
+                <br>
+                <b>Griddle</b>: A flat, heated surface used for cooking.
+                <br>
+
+                <b>Grilling, indirect</b>: To grill food on a cool side of the grill and not directly over the flames or
+                coals.
+                Indirect grilling is best for foods that need to cook longer, such as whole chicken or pork ribs.
+                <br>
+                <b>Grilling, direct</b>: To grill directly over the coals or flames. Direct grilling is best for
+                quick-cooking
+                foods, or for giving grill marks to foods that cook longer.
+            </div>
+            
+            <br><br>
+            <img src="tips1.webp" alt="" height="400" width="700">
+            <div class="chef" style="font-size: 18px; color: rgba(31, 30, 30, 0.308);">chef's Knife, image:Alison Bickel
+            </div>
+            <br><br>
+            <div id="h">
+                <div class="letter" style="font-size: 27px;">H</div><br>
+                <b>Heavy-bottomed pot</b>: A pot with a base that’s sturdy enough not to overheat easily. Heat distributes better in pots with heavy metal bottoms, making food less likely to burn.
+<br>
+                <b>Hollandaise</b>: A fundamental sauce in classical French cuisine made of lemon juice and egg yolks emulsified into melted butter. Hollandaise is served over seafood, steaks, and eggs Benedict.
+            </div>
+            <br><br>
+            <div id="i">
+                <div class="letter" style="font-size: 27px;">I</div><br>
+                <b>Infuse (steep)</b>: To let an aromatic sit in liquid, either hot or cold, so it can flavor the liquid.
+            </div>
+            <br><br>
+            <div id="j">
+                <div class="letter" style="font-size: 27px;">J</div><br>
+                <b>Julienne</b>: To cut food finely into matchsticks.
+            </div>
+            <div id="k">
+                <div class="letter" style="font-size: 27px;">K</div><br>
+            </div>
+            
+            <div id="l">
+                <div class="letter" style="font-size: 27px;">L</div><br>
+                <b>Liquid ingredients</b>: The ingredients in a recipe that contain moisture, such as molasses, milk, and eggs.
+            </div>
+        </div>
+
+        <br>
+        <div class="readmore" style="font-size: 20px;">Read More: <a href="#">E-L</a></div>
+    </div>
+    <br><br><br>
+    <footer>
+        <div class="verymain">
+
+            <div class="log">
+                <div class="faltu"></div>
+                <div class="content2">
+                    <h2>FOODZEE</h2>
+                    <h2>FOODZEE</h2>
+                </div>
+                <h3>Ready to Cook?</h3>
+                <br>
+                <h3>Sign Up for our weekly Newsletters!</h3>
+                <br>
+                <input type="text" name="Email" id="mail" placeholder="Eg-HarshitSaddi@gmail.com">
+                <br><br>
+                <button type="button">Sign Up</button>
+            </div>
+            <div class="mainlog">
+
+                <div class="log1">
+                    <ul>
+                        <li>Recipe</li>
+                        <li>Table Talk</li>
+                        <li>In The Kitchen</li>
+                        <li>Quick And Easy</li>
+                        <li>Holidays And Seasons</li>
+                    </ul>
+                </div>
+                <div class="log2">
+                    <ul>
+                        <a href="aboutus.html" target="_blank">
+                            <li>About Us</li>
+                        </a>
+                        <li>Terms Of Service</li>
+                        <li>Editorial Guidlines</li>
+                        <li>Privacy Policy</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+                <div class="log2">
+                    <ul>
+                        <li>Advertise</li>
+                        <li>Careers</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+    </footer>
+    <script src="app.js"></script>
+    <script>
+        let open1 = document.getElementById("open1");
+        let open2 = document.getElementById("open2");
+        let open3 = document.getElementById("open3");
+        let open4 = document.getElementById("open4");
+        let sinp = document.getElementById("sinp");
+        let img1 = document.getElementById("img1");
+        let o1 = document.getElementById("o1");
+        let o2 = document.getElementById("o2");
+        let o3 = document.getElementById("o3");
+        let o4 = document.getElementById("o4");
+
+
+        function hover1() {
+            o1.style.display = "block";
+        }
+        function hover2() {
+            o1.style.display = "none";
+        }
+        function hover3() {
+            o2.style.display = "block";
+        }
+        function hover4() {
+            o2.style.display = "none";
+        }
+        function hover5() {
+            o3.style.display = "block";
+        }
+        function hover6() {
+            o3.style.display = "none";
+        }
+        function hover7() {
+            o4.style.display = "block";
+        }
+        function hover8() {
+            o4.style.display = "none";
+        }
+        function hover9() {
+            sinp.style.display = "block";
+            sinp.style.animation = "search23 2s";
+            img1.style.transform = "rotate(360deg)";
+        }
+        function hover10() {
+            sinp.style.display = "none";
+            img1.style.transform = "rotate(-0deg)";
+        }
+        open1.addEventListener('mouseover', hover1);
+        o1.addEventListener('mouseover', hover1);
+        open2.addEventListener('mouseover', hover3);
+        o2.addEventListener('mouseover', hover3);
+        open3.addEventListener('mouseover', hover5);
+        o3.addEventListener('mouseover', hover5);
+        open4.addEventListener('mouseover', hover7);
+        o4.addEventListener('mouseover', hover7);
+
+
+        // mouseout
+        open1.addEventListener('mouseout', hover2);
+        o1.addEventListener('mouseout', hover2);
+        open2.addEventListener('mouseout', hover4);
+        o2.addEventListener('mouseout', hover4);
+        open3.addEventListener('mouseout', hover6);
+        o3.addEventListener('mouseout', hover6);
+        open4.addEventListener('mouseout', hover8);
+        o4.addEventListener('mouseout', hover8);
+    </script>
+    </div>
+</body>
+
+</html>

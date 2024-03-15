@@ -1,0 +1,269 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.Logoname{
+    position: relative;
+}
+.logoo{
+    display: flex;
+    justify-content: center;
+    height: 100px;
+}
+.Logoname h2 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    margin-top: 50px;
+}
+.Logoname h2:nth-child(1) {
+    color: transparent;
+    -webkit-text-stroke: 2px rgb(255, 234, 177);
+}
+
+.Logoname h2:nth-child(2) {
+    color: rgb(255, 234, 177);
+    animation: animate1 5s ease-in-out infinite;
+}
+@keyframes animate1 {
+
+    0%,
+    100% {
+        clip-path: polygon(0% 45%, 15% 44%, 32% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%)
+    }
+
+    50% {
+        clip-path: polygon(0 60%, 16% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 40%, 100% 100%, 0% 100%)
+    }
+}
+.name h1 {
+    padding-left: 15px;
+    margin-top: -16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    text-align: center;
+}
+
+.name p {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 5px;
+    padding-left: 12px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+#we a{
+    text-decoration: none;
+    color:white;
+    font-size: 25px;
+    font-weight: lighter;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+#we h4{
+    height: 50px;
+    display: flex;
+    align-items:center;
+    margin-top: 15px;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#navtem{
+    background-color: rgb(0, 0, 0);
+    display: none;
+    position: absolute;
+    z-index: 10;
+    margin-left: 10px;
+}
+#we:hover a{
+    color: black;
+}
+#we:hover h4{
+    background-color: rgb(255, 215, 104);
+}
+#we:target{
+    background-color: rgb(255, 215, 104);
+
+}
+.lin{
+    width: 25px;
+    background-color: rgb(255, 255, 255);
+    height:6px;
+    margin-top: 3px;
+    margin-bottom: 5px;
+    margin-left: 8px;
+}
+#hamlogo{
+    width: 50px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.bbut {
+    margin-top: 30px;
+    display:flex;
+    justify-content: space-around;
+    margin-left: 10px;
+}
+
+#but1,#but2 {
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: transparent;
+    text-align: center;
+    padding-top: 12px;
+    box-shadow: 0px 0px 20px 5px rgb(255, 234, 177);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    border: 2px solid rgb(255, 234, 177);
+    color: rgb(255, 234, 177);
+    font-size: 20px;
+}
+
+
+#but1:hover,#but2:hover {
+    cursor: pointer;
+    box-shadow: none;
+    background-color:rgb(255, 234, 177) ;
+    color: black;
+    transition: all .6s;
+}
+.div{
+    background-color: white;
+}
+.div h2{
+    color: rgb(0, 0, 0);
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.card_hu_hui{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card_hui{
+    height: auto;
+    border-radius: 1rem;
+    border: 0 solid #e5e7eb;
+    box-sizing: border-box;
+    box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
+    --tw-shadow: 0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);
+    --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color);
+    box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    width: 400px;
+    overflow: hidden;
+}
+.card_hui img{
+    width:100%;
+    height: 250px;
+
+}
+.text{
+    color: black;
+    font-weight: bold;
+    font-size: 23px;
+    margin-top: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+.text1{
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 10px;
+    color: gray;
+    margin: 5px;
+    text-align: center;
+}
+.card_button{
+    width: 150px;
+    height: 50px;
+    background-color: rgb(126, 34, 206);
+    text-align: center;
+    border-radius: 9999px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+.card_button a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: bold;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+.testimonials{
+    background-color: white;
+}
+.test_heading{
+    color: rgb(1, 1, 1);
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight:lighter;
+}
+.main_testimonial{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.testimonial1{
+    color: gray;
+    width: 400px;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 30px;
+    background-color: rgb(233, 230, 230);
+    line-height: 1.4;
+    border-radius: 2px;
+    font-weight: lighter;
+}
+.test_name{
+    color: black;
+}
+.desig{
+    color: rgb(68, 68, 68);
+}
+footer{
+    background-color: white;
+}
+.logo_text{
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+    color: gray;
+    text-align: center;
+}
+.logo_pictures{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+.logo_pictures img{
+    height: 30px;
+    width: 30px;
+    margin-left: 17px;
+    cursor: pointer;
+}
+.Logoname23 h2 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+}
+.logo_logo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.Logoname23 h2:nth-child(1) {
+    color: transparent;
+    -webkit-text-stroke: .7px rgb(255, 207, 77);
+}
+
+.Logoname23 h2:nth-child(2) {
+    color: rgb(255, 207, 77);
+    animation: animate1 4s ease-in-out infinite;
+}

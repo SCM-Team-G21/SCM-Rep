@@ -1,0 +1,19 @@
+{
+  "name": "harsainyam",
+  "version": "1.0.0",
+  "description": "its a package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Harsainyam",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/cli": "^17.2.2",
+    "express": "^4.18.3",
+    "figlet": "^1.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
