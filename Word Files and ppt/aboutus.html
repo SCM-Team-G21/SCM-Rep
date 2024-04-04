@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>About Us - FoodZee</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="Test1.css"> -->
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .about-section {
+      padding: 60px 0;
+      text-align: center;
+    }
+
+    .about-section h2 {
+      color: #343a40;
+      margin-bottom: 30px;
+    }
+
+    .team-member {
+      margin-bottom: 30px;
+    }
+
+    .team-member img {
+      border-radius: 50%;
+    }
+
+    .team-member h3 {
+      margin-top: 15px;
+      color: #343a40;
+    }
+
+    .footer {
+      background-color: #b4acac;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .social-icons a {
+      color: #495057;
+      margin: 0 10px;
+      font-size: 20px;
+    }
+
+    .content1 {
+      position: relative;
+    }
+
+    .content1 h2 {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      font-size: 3em;
+      margin-left: 200px;
+      margin-top: -4px;
+
+    }
+
+    .content1 h2:nth-child(1) {
+      color: transparent;
+      -webkit-text-stroke: 2px rgb(255, 234, 177);
+    }
+
+    .content1 h2:nth-child(2) {
+      color: rgb(255, 234, 177);
+      animation: animate1 5s ease-in-out infinite;
+    }
+
+    @keyframes animate1 {
+
+      0%,
+      100% {
+        clip-path: polygon(0% 45%, 15% 44%, 32% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%)
+      }
+
+      50% {
+        clip-path: polygon(0 60%, 16% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 40%, 100% 100%, 0% 100%)
+      }
+    }
+
+    footer {
+      background-color: rgb(44, 3, 3);
+      height: 300px;
+    }
+
+    .verymain {
+      display: flex;
+      justify-content: space-between;
+      background-color: rgb(44, 3, 3);
+    }
+
+    .mainlog {
+      display: flex;
+      justify-content: space-around;
+      width: 50%;
+      margin-top: 27px;
+    }
+
+    .faltu {
+      height: 100px;
+      width: auto;
+    }
+
+    .log1 ul {
+      list-style: none;
+      color: rgb(103, 196, 224);
+      font-size: 20px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-weight: bold;
+      line-height: 35px;
+    }
+
+    .log1 ul li:hover {
+      text-decoration: underline;
+    }
+
+    .log2 ul li:hover {
+      color: rgb(49, 49, 49);
+    }
+
+    .log2 ul li {
+      list-style: none;
+      font-weight: lighter;
+      color: rgb(255, 255, 255);
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      line-height: 25px;
+      font-size: 17px;
+      text-decoration: none;
+    }
+
+    .log2 ul a {
+      text-decoration: none;
+    }
+
+    .log {
+      margin-left: 30px;
+    }
+
+    .log h3 {
+      font-size: 20px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      color: white;
+
+    }
+
+    .log input {
+      outline: none;
+      border: none;
+      width: 300px;
+      height: 1px;
+      padding: 20px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 15px;
+      border-radius: 5px;
+    }
+
+    .log button {
+      padding: 10px;
+      background-color: transparent;
+      border: 2px solid rgb(255, 255, 122);
+      color: rgb(255, 202, 55);
+      border-radius: 5px;
+      width: 100px;
+    }
+
+    .content2 {
+      position: relative;
+    }
+
+    .content2 h2 {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      font-size: 60px;
+      margin-left: 40%;
+      margin-top: -50px;
+
+    }
+
+    .content2 h2:nth-child(1) {
+      color: transparent;
+      -webkit-text-stroke: 2px rgb(255, 234, 177);
+    }
+
+    .content2 h2:nth-child(2) {
+      color: rgb(255, 234, 177);
+      animation: animate1 5s ease-in-out infinite;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="content1">
+      <h2>FOODZEE</h2>
+      <h2>FOODZEE</h2>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="Test1.html" target="_blank">Home</a>
+        </li>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="recipeDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Recipe
+          </button>
+          <div class="dropdown-menu" aria-labelledby="recipeDropdown">
+            <a class="dropdown-item " href="#">Breakfast</a>
+            <a class="dropdown-item" href="#">Lunch</a>
+            <a class="dropdown-item" href="#">Dinner</a>
+            <a class="dropdown-item" href="#">Dessert</a>
+            <a class="dropdown-item" href="#">Drinks</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="recipeDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 10px;">
+            Quick Bites
+          </button>
+          <div class="dropdown-menu" aria-labelledby="recipeDropdown">
+            <a class="dropdown-item " href="#">Recipe</a>
+            <a class="dropdown-item" href="#">Recipe Collection</a>
+            <a class="dropdown-item" href="#">Tips & Techniques</a>
+            <a class="dropdown-item" href="#">Ingridient Guides</a>
+          </div>
+        </div>
+        <li class="nav-item">
+          <a class="nav-link" href="VideoRecipes.html" target="_blank">Video Recipes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="News.html" target="_blank">Food-News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contactus.html" target="_blank">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="container content-section ">
+    <div class="row">
+      <div class="col-lg-6">
+        <h2>Our Website</h2>
+        <br>
+        <p>Welcome to FoodZee, where our passion for delicious and wholesome recipes brings people together in the joy
+          of cooking and sharing. Founded with the belief that cooking is not just a task but a celebration of
+          creativity and flavors, FoodZee is your culinary companion on a journey to explore the world of delectable
+          dishes.</p>
+      </div>
+      <div class="col-lg-6 image-container">
+        <img src="testimages\bcf5f3d584b65de005c7379ecab9d0ff-removebg-preview.png" alt="Sample Image">
+      </div>
+    </div>
+  </div>
+  <div class="container content-section ">
+    <div class="row">
+      <div class="col-lg-6 image-container">
+        <img src="testimages\images-removebg-preview.png" alt="Sample Image" style="width: 300px;">
+      </div>
+      <div class="col-lg-6">
+        <h2>About Team</h2>
+        <br>
+        <p>Our team of dedicated food enthusiasts, chefs, and nutritionists curate a diverse collection of recipes that
+          cater to every palate and dietary preference. Whether you're a seasoned chef or a kitchen novice, FoodZee is
+          your go-to source for inspiration, tips, and a vibrant community eager to share their culinary experiences.
+          Join us as we embark on a culinary adventure, celebrating the art of cooking and the joy it brings to our
+          lives.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container about-section">
+    <h2>About Us</h2>
+    <p>Welcome to FoodZee, your go-to destination for sharing and discovering delicious recipes from around the world.
+      Our mission is to bring people together through the joy of cooking and sharing culinary experiences.</p>
+  </div>
+
+  <div class="container text-center">
+    <div class="jumbotron text-center">
+      <h1 class="display-4">Meet The Team</h1>
+    </div>
+    <div class="row">
+      <div class="col-md-4 team-member">
+        <img src="testimages\IMG20221024204811.jpg" alt="Team Member 1" class="img-fluid"
+          style="height: 200px;width: 150px;border: 2px solid black;">
+        <h3>Harsainyam Singh</h3>
+        <p>Founder & Developer</p>
+      </div>
+
+      <div class="col-md-4 team-member">
+        <img src="testimages\harsh.jpeg" alt="Team Member 2" class="img-fluid"
+          style="height: 200px;width: 150px;border: 2px solid black;">
+        <h3>Harshdeep Singh</h3>
+        <p>Website Curator</p>
+      </div>
+
+      <div class="col-md-4 team-member">
+        <img src="testimages\WhatsApp Image 2023-10-08 at 5.57.29 PM.jpeg" alt="Team Member 3" class="img-fluid"
+          style="height: 200px;width: 150px;border: 2px solid black;">
+        <h3>Harshdeep Singh</h3>
+        <p>Web Developer</p>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="verymain">
+
+      <div class="log">
+        <div class="faltu"></div>
+        <div class="content2">
+          <h2>FOODZEE</h2>
+          <h2>FOODZEE</h2>
+        </div>
+        <h3>Ready to Cook?</h3>
+        <br>
+        <h3>Sign Up for our weekly Newsletters!</h3>
+        <br>
+        <input type="text" name="Email" id="mail" placeholder="Eg-HarshitSaddi@gmail.com">
+        <br><br>
+        <button type="button">Sign Up</button>
+      </div>
+      <div class="mainlog">
+
+        <div class="log1">
+          <ul>
+            <li>Recipe</li>
+            <li>Table Talk</li>
+            <li>In The Kitchen</li>
+            <li>Quick And Easy</li>
+            <li>Holidays And Seasons</li>
+          </ul>
+        </div>
+        <div class="log2">
+          <ul>
+            <a href="aboutus.html" target="_blank">
+              <li>About Us</li>
+            </a>
+            <li>Terms Of Service</li>
+            <li>Editorial Guidlines</li>
+            <li>Privacy Policy</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+        <div class="log2">
+          <ul>
+            <li>Advertise</li>
+            <li>Careers</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

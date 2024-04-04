@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h1,
+    h2 {
+      color: #333;
+    }
+
+    input,
+    button {
+      margin-bottom: 10px;
+    }
+
+    video {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Video Website</h1>
+
+  <h2>Upload Video</h2>
+  <form id="uploadForm" enctype="multipart/form-data">
+    <input type="text" name="title" placeholder="Title" required>
+    <input type="text" name="description" placeholder="Description">
+    <input type="file" name="video" accept="video/*" required>
+    <button type="submit">Upload</button>
+  </form>
+
+  <h2>Videos</h2>
+  <div id="videosList"></div>
+  <script>document.addEventListener('DOMContentLoaded', () => {
+      const uploadForm = document.getElementById('uploadForm');
+      const videosList = document.getElementById('videosList');
+
+      uploadForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(uploadForm);
+
+        try {
+          const response = await fetch('/upload', {
+            method: 'POST',
+            body: formData,
+          });
+
+          if (!response.ok) {
+            throw new Error('Upload failed');
+          }
+
+          alert('Video uploaded successfully');
+          uploadForm.reset();
+          fetchVideos();
+        } catch (error) {
+          console.error(error);
+          alert('Error uploading video');
+        }
+      });
+
+      videosList.addEventListener('click', async (event) => {
+        if (event.target.tagName === 'BUTTON') {
+          const videoId = event.target.dataset.id;
+          if (!videoId) return;
+
+          try {
+            const response = await fetch(`/video/${videoId}`, {
+              method: 'DELETE',
+            });
+
+            if (!response.ok) {
+              throw new Error('Delete failed');
+            }
+
+            alert('Video removed successfully');
+            fetchVideos();
+          } catch (error) {
+            console.error(error);
+            alert('Error removing video');
+          }
+        }
+      });
+
+      async function fetchVideos() {
+        try {
+          const response = await fetch('/videos');
+          const videos = await response.json();
+
+          videosList.innerHTML = '';
+          videos.forEach(video => {
+            const videoElement = document.createElement('video');
+            videoElement.src = video.videoPath;
+            videoElement.controls = true;
+
+            const titleElement = document.createElement('h3');
+            titleElement.textContent = video.title;
+
+            const descriptionElement = document.createElement('p');
+            descriptionElement.textContent = video.description;
+
+            const removeButton = document.createElement('button');
+            removeButton.textContent = 'Remove';
+            removeButton.dataset.id = video._id;
+
+            const videoContainer = document.createElement('div');
+            videoContainer.appendChild(titleElement);
+            videoContainer.appendChild(descriptionElement);
+            videoContainer.appendChild(videoElement);
+            videoContainer.appendChild(removeButton);
+
+            videosList.appendChild(videoContainer);
+          });
+        } catch (error) {
+          console.error(error);
+          alert('Error fetching videos');
+        }
+      }
+
+      fetchVideos();
+    });
+  </script>
+  <script src="app2.js"></script>
+</body>
+
+</html>

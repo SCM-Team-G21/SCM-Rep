@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="referrer" content="unsafe-url">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id"
+        content="1008651531835-rtchs2v2kccn48g97l12o5chms2olmrl.apps.googleusercontent.com">
+    <link rel="stylesheet" href="Style\Test1.css">
+    <link rel="shortcut icon" href="testimages\logo-removebg-preview-removebg-preview.png" type="image/x-icon">
+    <title>FoodZee:Find the recipe you love.</title>
+
+</head>
+
+<body>
+
+    <div class="nav">
+        <nav>
+            <div class="col"></div>
+            <div class="search">
+                <img src="testimages\se.png" alt="search" id="img1">
+                <input type="text" placeholder="Search Your Recipe" id="sinp" onkeyup="Search()">
+            </div>
+            <div class="content">
+                <ul>
+                    <li id="open1">Recipe</li>
+                    <a href="maincontent\maincontent\A-Z.html" target="_blank">
+                        <li id="open3">A-Z Guide</li>
+                    </a>
+                    <a href="News.html" target="_blank">
+                        <li id="open4">News and Trends</li>
+                    </a>
+                    <a href="VideoRecipes.html" target="_blank">
+                        <li id="open5">Video Recipes</li>
+                    </a>
+                    <a href="aboutus.html" target="_blank">
+                        <li id="open2">About US</li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="non">
+        <ul id="o1">
+            <a href="maincontent\maincontent\breakfast.html" target="_blank">
+                <li>Breakfast</li>
+            </a>
+            <a href="maincontent\maincontent\lunch.html" target="_blank">
+                <li>Lunch</li>
+            </a>
+            <a href="maincontent\maincontent\dinner.html" target="_blank">
+                <li>Dinner</li>
+            </a>
+            <a href="maincontent\maincontent\dessert.html" target="_blank">
+                <li>Dessert</li>
+            </a>
+            <a href="maincontent\maincontent\drinks.html" target="_blank">
+                <li>Drink</li>
+            </a>
+
+        </ul>
+    </div>
+    <div id="login">
+        <div id="cross">
+            <img src="testimages\png-close-x-logo-white-icon-31631914840uc9joqwssz-removebg-preview.png" alt="cross">
+        </div>
+        <div id="dologin">
+            <div class="loginphoto">Login And Get Updates.<img src="testimages\chad-montano-eeqbbemH9-c-unsplash.jpg"
+                    alt="Food"></div>
+            <div class="credentials">
+                <h1
+                    style="font-size:40px;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;margin-left:40%;">
+                    LOGIN</h1>
+                <br>
+                <form id="loginForm">
+                    <label for="logininput">Email</label>
+                    <input type="email" placeholder="Yourmail@gmail.com" class="logininput" id="email" required10>
+                    <br><br>
+                    <label for="logininput1">Password</label>
+                    <input type="password" placeholder="AkfH8KJsleDi" class="logininput1" id="password"
+                        style="margin-left:23.6% ;">
+                    <div class="submitb" style="text-align: center; justify-content: center;">
+                        <button type="submit"
+                            style="display:block; background-color:transparent; color:white; font-size: 25px;  border:none; text-align: center;margin-left: 35%; margin-top: 5px; cursor: pointer;">LOGIN</button>
+                    </div>
+                </form>
+                <div class="loginsite">
+                    <button id="signInButton">
+                        <div class="google">
+                            <img src="testimages\google-logo-9808.png" alt="google">
+                            <h4>Login With Google</h4>
+                        </div>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="signup">
+        <div id="cross1">
+            <img src="testimages\png-close-x-logo-white-icon-31631914840uc9joqwssz-removebg-preview.png" alt="cross">
+        </div>
+        <div id="dologin1">
+            <div class="loginphoto2">Sign UP To Get The Latest Updates.<img
+                    src="testimages\umesh-soni-CgF1eeY99_I-unsplash.jpg" alt="Food"></div>
+            <div class="credentials">
+                <h1
+                    style="font-size:40px;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;margin-left:40%;">
+                    SignUP</h1>
+                <br>
+                <div class="maain">
+                    <label for="logininput2">Email</label>
+                    <input type="email" placeholder="Yourmail@gmail.com" class="logininput2">
+                    <a href="#" style="text-decoration:none;">
+                        <h6
+                            style="font-size: 13px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;text-decoration:none;margin-left: 10px;">
+                            Forgot ID?</h6>
+                    </a>
+                </div>
+                <br><br>
+                <div class="maain1">
+                    <label for="logininput3">Password</label>
+                    <input type="password" placeholder="AkfH8KJsleDi" class="logininput3">
+                    <a href="#" style="text-decoration: none;">
+                        <h6
+                            style="font-size: 13px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;text-decoration:none;margin-left: 10px;">
+                            Forgot Password?</h6>
+                    </a>
+                </div>
+                <div class="submitb">
+                    <h4>SignUp</h4>
+                </div>
+                <div class="loginsite">
+                    <div class="google">
+                        <img src="testimages\google-logo-9808.png" alt="google">
+                        <h4>SignUP With Google</h4>
+                    </div>
+                    <div class="facebook">
+                        <img src="testimages\facebook-logo-510.png" alt="facebook">
+                        <h4>SignUP With Facebook</h4>
+                    </div>
+                    <div class="instagram">
+                        <img src="testimages\instagram.png" alt="instagram">
+                        <h4>SignUP With Instagram</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="centre">
+        <div class="left">
+            <div id="message" style="color: white;font-size: 50px;margin: 50px;">
+                <p>Welcome <span id="userName" style="color: rgb(255, 234, 177);"></span></span> </p>
+            </div>
+            <div class="name">
+                <div class="content1">
+                    <h2>FOODZEE</h2>
+                    <h2>FOODZEE</h2>
+                </div>
+                <br><br>
+                <br>
+                <h1>Find Recipe You love</h1>
+                <br><br>
+                <p>
+                    Create new videos, learn New Recipes, get recipe from your Ingredients,Order Food and much
+                    more.
+                </p>
+                <br>
+                <div class="bbut">
+                    <div id="but1">
+                        Login
+                    </div>
+                    <div id="but2">
+                        <div id="signOutButton">Sign Out</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="imgr">
+            <img src="testimages\pngwing.com.png" alt="" id="i1">
+            <img src="testimages\istockphoto-1282979055-612x612-removebg-preview.png" alt="" id="i2">
+            <div class="bgname">
+                BURGER
+            </div>
+            <div class="nameimg">
+                Hungry? Let's Meat UP!
+            </div>
+        </div>
+    </div>
+    <div class="written">
+        <br>
+        <a href="#">
+            <h1
+                style="font-size:40px;font-weight: bold;font-family: Verdana, Geneva, Tahoma, sans-serif;text-align: center;text-decoration: underline;color:rgb(58, 29, 12);">
+                Popular Recipes</h1>
+        </a>
+        <br>
+        <br>
+        <div class="card">
+            <div class="card1">
+                <img src="testimages\ice cream.jpg" alt="Ice-cream">
+                <br>
+                <br>
+                <h2
+                    style="color:rgb(250, 54, 54);font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 17px;margin-left: 10px;font-smooth:auto;">
+                    DESSERT</h2>
+                <br>
+                <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Make Delicious Ice-cream At Home.</p>
+                <br><br><br>
+                <div class="watch1">
+                    <img src="testimages\Watches 30 free icons Png.png" alt="" id="watch">
+                    <p>3Hr</p>
+                    <div class="rate">
+                        <input type="radio" id="star5" name="rate" value="5">
+                        <label for="star5" title="text">5 stars</label>
+                        <input type="radio" id="star4" name="rate" value="4">
+                        <label for="star4" title="text">4 stars</label>
+                        <input type="radio" id="star3" name="rate" value="3">
+                        <label for="star3" title="text">3 stars</label>
+                        <input type="radio" id="star2" name="rate" value="2">
+                        <label for="star2" title="text">2 stars</label>
+                        <input type="radio" id="star1" name="rate" value="1">
+                        <label for="star1" title="text">1 star</label>
+                    </div>
+                </div>
+            </div>
+            <div class="card1">
+                <img src="testimages\Shahipaneer.jpg" alt="Ice-cream">
+                <br>
+                <br>
+                <h2
+                    style="color:rgb(250, 54, 54);font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 17px;margin-left: 10px;">
+                    RECIPE</h2>
+                <br>
+                <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Make Shahi Paneer like Restraunt.</p>
+                <br><br><br>
+                <div class="watch1">
+                    <img src="testimages\Watches 30 free icons Png.png" alt="" id="watch">
+                    <p>2Hr</p>
+                    <div class="rate2">
+                        <input type="radio" id="star15" name="rate2" value="15">
+                        <label for="star15" title="text">5 stars</label>
+                        <input type="radio" id="star14" name="rate2" value="14">
+                        <label for="star14" title="text">4 stars</label>
+                        <input type="radio" id="star13" name="rate2" value="13">
+                        <label for="star13" title="text">3 stars</label>
+                        <input type="radio" id="star12" name="rate2" value="12">
+                        <label for="star12" title="text">2 stars</label>
+                        <input type="radio" id="star11" name="rate2" value="11">
+                        <label for="star11" title="text">1 star</label>
+                    </div>
+                </div>
+            </div>
+            <div class="card1">
+                <img src="testimages\pasta.jpg" alt="Ice-cream">
+                <br>
+                <br>
+                <h2
+                    style="color:rgb(250, 54, 54);font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 17px;margin-left: 10px;">
+                    FAST FOOD</h2>
+                <br>
+                <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Tasty Pasta Recipe To Make for Yourself.
+                </p>
+                <br><br><br>
+                <div class="watch1">
+                    <img src="testimages\Watches 30 free icons Png.png" alt="" id="watch">
+                    <p>1Hr</p>
+                    <div class="rate1">
+                        <input type="radio" id="star10" name="rate1" value="10">
+                        <label for="star10" title="text">5 stars</label>
+                        <input type="radio" id="star9" name="rate1" value="9">
+                        <label for="star9" title="text">4 stars</label>
+                        <input type="radio" id="star8" name="rate1" value="8">
+                        <label for="star8" title="text">3 stars</label>
+                        <input type="radio" id="star7" name="rate1" value="7">
+                        <label for="star7" title="text">2 stars</label>
+                        <input type="radio" id="star6" name="rate1" value="6">
+                        <label for="star6" title="text">1 star</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+    </div>
+    <hr>
+
+    <footer>
+        <div class="verymain">
+
+            <div class="log">
+                <div class="faltu"></div>
+                <div class="content2">
+                    <h2>FOODZEE</h2>
+                    <h2>FOODZEE</h2>
+                </div>
+                <h3>Ready to Cook?</h3>
+                <br>
+                <h3>Sign Up for our weekly Newsletters!</h3>
+                <br>
+                <input type="text" name="Email" id="mail" placeholder="Eg-HarshitSaddi@gmail.com">
+                <br><br>
+                <button type="button">Sign Up</button>
+            </div>
+            <div class="mainlog">
+
+                <div class="log1">
+                    <ul>
+                        <a href="maincontent\maincontent\breakfast.html" target="_blank"
+                            style="text-decoration:none; color: white;">
+                            <li>Breakfast</li>
+                        </a>
+                        <a href="maincontent\maincontent\lunch.html" target="_blank"
+                            style="text-decoration:none; color: white;">
+                            <li>lunch</li>
+                        </a>
+                        <a href="maincontent\maincontent\dinner.html" target="_blank"
+                            style="text-decoration:none; color: white;">
+                            <li>Dinner</li>
+                        </a>
+                        <a href="maincontent\maincontent\dessert.html" target="_blank"
+                            style="text-decoration:none; color: white;">
+                            <li>Dessert</li>
+                        </a>
+                        <a href="maincontent\maincontent\drinks.html" target="_blank"
+                            style="text-decoration:none; color: white;">
+                            <li>Drinks</li>
+                        </a>
+                        <a href="maincontent\maincontent\A-Z.html" target="_blank"
+                            style="text-decoration:none; color: white;">
+                            <li>A-Z GUIDE</li>
+                        </a>
+                        <a href="News.html" target="_blank" style="text-decoration:none; color: white;">
+                            <li>News and Trends</li>
+                        </a>
+                        <a href="VideoRecipes.html" target="_blank" style="text-decoration:none; color: white;">
+                            <li>Video Recipes</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="log2">
+                    <ul>
+                        <a href="aboutus.html" target="_blank">
+                            <li>About Us</li>
+                        </a>
+                        <a href="comments.html" target="_blank">
+                            <li>Recipe Review</li>
+                        </a>
+                        <a href="contactus.html" target="_blank">
+                            <li>Contact</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <!-- <div id="g_id_onload" data-client_id="1008651531835-rtchs2v2kccn48g97l12o5chms2olmrl.apps.googleusercontent.com"
+            data-login_uri="http://localhost:5500" data-auto_prompt="false">
+        </div>
+        <div class="g_id_signin" data-type="standard" data-size="large" data-theme="outline" data-text="sign_in_with"
+            data-shape="rectangular" data-callback="OnSuccess" data-logo_alignment="left">
+            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+            <a href="#" onclick="signOut();">Sign out</a> -->
+
+        <script type="module">
+            function init() {
+                document.getElementById("email").value = "";
+                document.getElementById("password").value = "";
+            }
+            window.onload = init;
+
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";
+
+
+            import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-auth.js";
+
+            const firebaseConfig = {
+                apiKey: "AIzaSyDGXQ2VoO7HKH54wZASq206BVMpF8b_d8M",
+                authDomain: "recipe-website-3.firebaseapp.com",
+                projectId: "recipe-website-3",
+                storageBucket: "recipe-website-3.appspot.com",
+                messagingSenderId: "1056086926137",
+                appId: "1:1056086926137:web:d1788991abbc69aa9fbee8"
+            };
+
+
+            const app = initializeApp(firebaseConfig);
+            const auth = getAuth();
+            const provider = new GoogleAuthProvider();
+            const conn = 0;
+
+            const signInButton = document.getElementById("signInButton");
+            const signOutButton = document.getElementById("signOutButton");
+            const message = document.getElementById("message");
+            const userName = document.getElementById("userName");
+            const userEmail = document.getElementById("userEmail");
+            const userProfilePicture = document.getElementById("userProfilePicture");
+
+            signOutButton.style.display = "none";
+            message.style.display = "none";
+
+            const userSignIn = async () => {
+                signInWithPopup(auth, provider)
+                    .then((result) => {
+                        const user = result.user
+                        console.log(user);
+                    }).catch((error) => {
+                        const errorCode = error.code;
+                        const errorMessage = error.message
+                    })
+            }
+
+            const userSignOut = async () => {
+                signOut(auth).then(() => {
+                    alert("You have signed out successfully!");
+                }).catch((error) => { })
+            }
+
+            onAuthStateChanged(auth, (user) => {
+                if (user) {
+                    signOutButton.style.display = "block";
+                    but2.style.display = "block";
+                    message.style.display = "block";
+                    but1.style.display = "none";
+                    login.style.display = "none";
+                    body.style.overflowY = "scroll";
+                    userName.innerHTML = user.displayName;
+                    userEmail.innerHTML = user.email
+                    userProfilePicture.innerHTML = user.ProfilePicture
+                    conn = 1
+
+                } else {
+                    signOutButton.style.display = "none";
+                    message.style.display = "none";
+                    but2.style.display = "none";
+                    but1.style.display = "block";
+
+                }
+            })
+
+            signInButton.addEventListener('click', userSignIn);
+            signOutButton.addEventListener('click', userSignOut);
+            signOutButton.addEventListener('click', );
+        </script>
+        <script>
+
+            // Login Form
+            document.getElementById("loginForm").addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent the default form submission
+                var loginEmail = document.getElementById("email").value;
+                var loginPassword = document.getElementById("password").value;
+                if (checkCredentials(loginEmail, loginPassword)) {
+                    alert("Login successful!");
+                    message.style.display = "block";
+                    login.style.display="none";
+                    but1.style.display="none";
+                    body.style.overflowY = "scroll";
+                    but2.style.display = "block";
+                    signOutButton.style.display="block";
+                    // Redirect to another page or perform additional actions for successful login
+                } else {
+                    document.getElementById("loginForm").addEventListener("submit", function (event) {
+                        event.preventDefault(); // Prevent the default form submission
+                        var signupEmail = document.getElementById("email").value;
+                        var signupPassword = document.getElementById("password").value;
+                        storeCredentials(signupEmail, signupPassword);
+                        alert("Sign up successful! You can now log in.");
+
+                    });
+                }
+            })
+
+            function storeCredentials(email, password) {
+                var credentials = JSON.parse(localStorage.getItem("credentials")) || {};
+                credentials[email] = password; // Use email as key
+                localStorage.setItem("credentials", JSON.stringify(credentials));
+            }
+
+            function checkCredentials(email, password) {
+                var credentials = JSON.parse(localStorage.getItem("credentials")) || {};
+                return credentials[email] === password;
+            }
+        </script>
+    </footer>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script defer src="Javascript\app.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+</body>
+
+</html>

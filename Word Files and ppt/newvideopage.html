@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Recipes</title>
+    <link rel="stylesheet" href="Style/Test1.css">
+    <style>.container {
+        margin: 20px;
+      }
+      
+      .search-container {
+        margin-bottom: 20px;
+      }
+      
+      #videoContainer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-evenly;
+      }
+      
+      .video {
+        width: 400px;
+        height: 250px;
+        margin-top:50px;
+
+      }
+      
+      .video h3 {
+        margin-top: 0;
+      }
+      
+      .video video {
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+
+      }
+      
+      .video button {
+        margin-top: 10px;
+        padding: 6px 12px;
+        background-color: #dc3545;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      
+      .video button:hover {
+        background-color: #c82333;
+      }
+      </style>
+      <script>
+        let videos = [];
+       
+       // Load videos from local storage on page load
+       window.onload = function() {
+         const storedVideos = JSON.parse(localStorage.getItem('videos'));
+         if (storedVideos) {
+           videos = storedVideos;
+           console.log('Videos loaded:', videos); // Log loaded videos to console
+           displayVideos(videos);
+         } else {
+           console.log('No videos found in local storage'); // Log if no videos found in local storage
+         }
+       }
+       
+       function searchVideos() {
+         const searchQuery = document.getElementById('searchInput').value.trim().toLowerCase();
+       
+         const filteredVideos = videos.filter(video =>
+           video.title.toLowerCase().includes(searchQuery)
+         );
+       
+         displayVideos(filteredVideos);
+       }
+       
+       function displayVideos(videos) {
+         const videoContainer = document.getElementById('videoContainer');
+         videoContainer.innerHTML = '';
+       
+         videos.forEach((video, index) => {
+           const videoElement = document.createElement('div');
+           videoElement.classList.add('video');
+           videoElement.innerHTML = `
+             <h3>${video.title}</h3>
+             <video width="200" controls>
+               <source src="${video.path}" type="video/mp4">
+               Your browser does not support the video tag.
+             </video>
+             <button onclick="removeVideo(${index})">Remove</button>
+           `;
+           videoContainer.appendChild(videoElement);
+         });
+       }
+       
+       function uploadVideo() {
+         const fileInput = document.getElementById('uploadInput');
+         const file = fileInput.files[0];
+       
+         if (file) {
+           const uploadedVideo = {
+             title: `Uploaded Video ${videos.length + 1}`,
+             path: URL.createObjectURL(file)
+           };
+       
+           videos.push(uploadedVideo);
+           saveVideosToLocalStorage();
+           console.log('Videos after upload:', videos); // Log videos after upload
+       
+           displayVideos(videos); // Display all videos including the newly uploaded one
+         } else {
+           alert('Please select a video to upload.');
+         }
+       }
+       
+       function removeVideo(index) {
+         videos.splice(index, 1);
+         saveVideosToLocalStorage();
+         displayVideos(videos);
+       }
+       
+       function saveVideosToLocalStorage() {
+         localStorage.setItem('videos', JSON.stringify(videos));
+       }
+       
+       </script>
+</head>
+
+<body>
+    <div class="nav">
+        <nav>
+            <div class="col"></div>
+            <div class="search">
+                <img src="testimages\se.png" alt="search" id="img1">
+                <input type="text" placeholder="Search Your Recipe" id="searchInput" onkeydown="searchVideos()">
+            </div>
+            <div class="content">
+                <ul>
+                    <li id="open1">Recipe</li>
+                    <a href="maincontent\maincontent\A-Z.html" target="_blank">
+                        <li id="open3">A-Z Guide</li>
+                    </a>
+                    <a href="News.html" target="_blank">
+                        <li id="open4">News and Trends</li>
+                    </a>
+                    <a href="VideoRecipes.html" target="_blank">
+                        <li id="open5">Video Recipes</li>
+                    </a>
+                    <a href="aboutus.html" target="_blank">
+                        <li id="open2">About US</li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="non">   
+        <ul id="o1">
+            <a href="maincontent\maincontent\breakfast.html" target="_blank">
+                <li>Breakfast</li>
+            </a>
+            <a href="maincontent\maincontent\lunch.html" target="_blank">
+                <li>Lunch</li>
+            </a>
+            <a href="maincontent\maincontent\dinner.html" target="_blank">
+                <li>Dinner</li>
+            </a>
+            <a href="maincontent\maincontent\dessert.html" target="_blank">
+                <li>Dessert</li>
+            </a>
+            <a href="maincontent\maincontent\drinks.html" target="_blank">
+                <li>Drink</li>
+            </a>
+
+        </ul>
+
+    </div>
+    <div class="vidoe">
+        <video src="videos\My Video1.mp4" class="vidoe_sample"  loop poster="" style="border: 2px solid rgb(255, 255, 122); width: 99.8%;"></video>
+    </div>
+    <div class="container">
+        
+        <input type="file" id="uploadInput" accept="video/*">
+        <button onclick="uploadVideo()">Upload Video</button>
+    
+        <div id="videoContainer"></div>
+      </div>
+    
+    <script src="Javascript\app.js"></script>
+    <script src="Javascript\app2.js"></script>
+</body>
+
+</html>
