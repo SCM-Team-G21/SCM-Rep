@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Gallery</title>
+</head>
+<body>
+  <h1>Video Gallery</h1>
+
+  <!-- Form to upload videos -->
+  <form action="/upload" method="POST" enctype="multipart/form-data">
+    <input type="file" name="video" accept="video/*">
+    <button type="submit">Upload Video</button>
+  </form>
+
+  <!-- List of uploaded videos -->
+  <ul>
+    <% videos.forEach(video => { %>
+      <li>
+        <video src="/<%= video %>" width="320" controls></video>
+        <a href="/delete/<%= video %>">Delete</a>
+      </li>
+    <% }); %>
+  </ul>
+</body>
+</html>

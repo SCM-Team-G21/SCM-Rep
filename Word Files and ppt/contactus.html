@@ -1,0 +1,257 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Us</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <style>
+            body {
+                background: linear-gradient(to right, rgb(105, 103, 105), rgb(53, 53, 52));
+                font-family: 'Arial', sans-serif;
+                color: gray;
+                overflow-x: hidden;
+            }
+
+            .contact-form-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+
+            .contact-form {
+                width: 500px;
+                background-color: rgba(255, 255, 255, 0.9);
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                opacity:.8;
+            }
+
+            .contact-form h2 {
+                text-align: center;
+                color: #007bff;
+                font-weight: bold;
+            }
+
+            .form-group {
+                margin-bottom: 20px;
+            }
+
+            label {
+                font-weight: bold;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            textarea {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            textarea {
+                resize: vertical;
+                max-height: 500px;
+            }
+
+            button {
+                background-color: #007bff;
+                color: gray;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: #0056b3;
+            }
+
+            .contact-image {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 30px;
+            }
+
+            .contact-image img {
+                width: 100px;
+                border-radius: 20%;
+            }
+            .content1 {
+        position: relative;
+        margin-top: 10px;
+        }
+
+        .content1 h2 {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        font-size: 3em;
+        margin-left: 200px;
+        margin-top: -4px;
+
+        }
+        .content1 h2:nth-child(1) {
+        color: transparent;
+        -webkit-text-stroke: 2px rgb(255, 234, 177);
+        }
+
+        .content1 h2:nth-child(2) {
+        color: rgb(255, 234, 177);
+        animation: animate1 5s ease-in-out infinite;
+        }
+
+        @keyframes animate1 {
+
+        0%,
+        100% {
+            clip-path: polygon(0% 45%, 15% 44%, 32% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%)
+        }
+
+        50% {
+            clip-path: polygon(0 60%, 16% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 40%, 100% 100%, 0% 100%)
+        }
+        }
+        </style>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="content1">
+                <h2>FOODZEE</h2>
+                <h2>FOODZEE</h2>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="Test1.html" target="_blank">Home</a>
+                    </li>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="recipeDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Recipe
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="recipeDropdown">
+                          <a class="dropdown-item " href="#">Breakfast</a>
+                          <a class="dropdown-item" href="#">Lunch</a>
+                          <a class="dropdown-item" href="#">Dinner</a>
+                          <a class="dropdown-item" href="#">Dessert</a>
+                          <a class="dropdown-item" href="#">Drinks</a>
+                        </div>
+                      </div>
+                      <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="recipeDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 10px;">
+                          Quick Bites
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="recipeDropdown">
+                          <a class="dropdown-item " href="#">Recipe</a>
+                          <a class="dropdown-item" href="#">Recipe Collection</a>
+                          <a class="dropdown-item" href="#">Tips & Techniques</a>
+                          <a class="dropdown-item" href="#">Ingridient Guides</a>
+                        </div>
+                      </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="VideoRecipes.html" target="_blank">Video Recipes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="News.html" target="_blank">Food-News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html" target="_blank">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container">    
+            <div class="alert alert-warning" role="alert">
+                <div class="container">
+                    <!-- Button trigger modal -->
+                    <p>Allow Us to Send Notifications</p>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                      Allow
+                    </button>
+                  
+                    <!-- Modal -->
+                    <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Notifications    </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <p>Allow us to send Notifictions and Updates Directly At Your Desktop</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Block</button>
+                            <button type="button" class="btn btn-primary">Allow</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="margin-top: -30px;">
+                <span aria-hidden="true">&times;</span>
+            </div>
+        </div>
+        <div class="container mt-0">    
+            <div class="alert alert-warning" role="alert">
+              <strong>Warning!</strong> You Are not logged in.
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </div>
+        </div>
+        
+        <div class="contact-form-container" style="margin-top: 150px;">
+            <div class="contact-image">
+                <div class="container contact-form">
+                    <div class="jumbotron text-center">
+                        <h1 class="display-4">Contact Us</h1>
+                      </div>
+
+                    <div class="contact-image">
+                        <img src="testimages\lol2.avif" alt="Right Image">
+                    </div>
+
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Your Name:</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address:</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"
+                                required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <div class="text-center mt-5">
+                            <div class="spinner-border" role="status">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="Javascript\app.js"></script>
+
+    </body>
+
+    </html>

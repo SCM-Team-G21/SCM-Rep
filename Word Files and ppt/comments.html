@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .container {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
+
+    .cursor-pointer {
+      cursor: pointer;
+    }
+
+    .reviews-container {
+      margin-top: 30px;
+    }
+
+    .review-item {
+      list-style: none;
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      background-color: #fff;
+    }
+
+    #reviewForm {
+      margin-top: 30px;
+    }
+
+    #comment {
+      resize: none;
+    }
+
+    .rating {
+      margin-top: 20px;
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+      padding: 10px 20px;
+      font-size: 16px;
+      width: 150px;
+      margin-left: 200px;
+      transition: background-color 0.3s;
+      display: inline;
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3;
+      border-color: #0056b3;
+    }
+
+    .navbar {
+      background-color: #7CB9E8; /* Green */
+      box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.1);
+    }
+
+    .navbar-brand {
+      color: white;
+      font-weight: bold;
+      font-size: 24px;
+    }
+
+    .navbar-toggler-icon {
+      background-color: white;
+    }
+
+    .navbar-toggler {
+      border: 1px solid white;
+    }
+
+    .navbar-toggler:hover {
+      background-color: #7CB9E8; /* Green (slightly darker) */
+    }
+
+    .navbar-collapse {
+      background-color: #ffffff; /* White */
+    }
+
+    .navbar-nav .nav-link {
+      color: #7CB9E8; /* Green */
+      font-weight: bold;
+      border-radius: 12px;
+      text-align: center;
+      transition: color 0.3s;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #e3f2fd; /* Light blue */
+    }
+
+    .navbar-nav .nav-item.active .nav-link {
+      background-color: #7CB9E8; /* Green (slightly darker) */
+    }
+
+    .navbar-nav .nav-item .nav-link:hover {
+      background-color: #7CB9E8; /* Green (slightly darker) */
+    }
+    /* rating css start here  */
+    .rating-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .rating-stars {
+      display: flex;
+      margin-bottom: 10px;
+    }
+
+    .star {
+      font-size: 24px;
+      color: #ccc;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .star:hover,
+    .star.active {
+      color: #ffcc00;
+    }
+
+    .rating-value {
+      font-size: 18px;
+      font-weight: bold;
+      margin-left: 40px;
+    }
+    /* rating css end here */
+  </style>
+  <title>Recipe Review</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="maincontent\maincontent\lunch5.webp" width="30" height="30" class="d-inline-block align-top rounded-circle" alt="">
+      Recipe Review
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Recipes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Categories</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <h2 class="text-center mb-4">Recipe Review</h2>
+  <p class="text-center" style="font-size: large;font-weight: bold;">Foodzee</p>
+  <p class="text-center">Write your Review.</p>
+
+  <!-- Review Form -->
+  <form id="reviewForm">
+    <div class="form-group">
+      <label for="name">Your Name:</label>
+      <input type="text" class="form-control" id="name" required>
+    </div>
+    <div class="form-group">
+      <label for="comment">Your Comment:</label>
+      <textarea class="form-control" id="comment" rows="4" required></textarea>
+    </div>
+    <div class="rating-container">
+      <div class="rating-stars" id="ratingStars">
+        <!-- Stars will be added dynamically using JavaScript -->
+      </div>
+      <div class="rating-value" id="ratingValue">Rating: 0</div>
+    </div>
+    </div>
+    <input type="hidden" id="ratingInput" name="rating" value="0">
+    <button type="submit" class="btn btn-primary btn-block">Submit Review</button>
+  </form>
+
+  <!-- Display Reviews -->
+  <div class="reviews-container">
+    <h3 class="text-center mb-4">Reviews</h3>
+    <ul class="list-group" id="reviewsList">
+      <!-- Reviews will be added dynamically using JavaScript -->
+    </ul>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script>
+  // JavaScript code for dynamic star rating
+  document.addEventListener("DOMContentLoaded", function () {
+    const ratingStarsContainer = document.getElementById("ratingStars");
+    const reviewsList = document.getElementById("reviewsList");
+    const reviewForm = document.getElementById("reviewForm");
+
+    // Event listener for review form submission
+    reviewForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const comment = document.getElementById("comment").value;
+
+      // Create new review element
+      const reviewItem = document.createElement("li");
+      reviewItem.classList.add("review-item", "list-group-item");
+      reviewItem.innerHTML =` <strong>${name} (${selectedRating} stars):</strong> ${comment}`;
+
+      // Insert the new review at the beginning of the list
+      reviewsList.insertBefore(reviewItem, reviewsList.firstChild);
+
+      // Reset form
+      reviewForm.reset();
+      setRating(0);
+    });
+
+    let selectedRating = 0;
+
+    // Add stars dynamically
+    for (let i = 1; i <= 5; i++) {
+      const star = document.createElement("span");
+      star.classList.add("fa", "fa-star", "mr-2", "cursor-pointer");
+      star.setAttribute("data-rating", i);
+      ratingStarsContainer.appendChild(star);
+
+      // Add event listener to stars
+      star.addEventListener("click", function () {
+        selectedRating = parseInt(this.getAttribute("data-rating"));
+        setRating(selectedRating);
+      });
+    }
+
+    // Function to set rating
+    function setRating(rating) {
+      for (let i = 1; i <= 5; i++) {
+        const star = ratingStarsContainer.querySelector(`[data-rating="${i}"]`);
+        star.classList.toggle("text-warning", i <= rating);
+      }
+
+      // Set the rating value in the hidden input field
+      document.getElementById("ratingInput").value = rating;
+    }
+  });
+  // rating javascript start here
+  document.addEventListener("DOMContentLoaded", function () {
+    const ratingStarsContainer = document.getElementById("ratingStars");
+    const ratingValue = document.getElementById("ratingValue");
+
+    let selectedRating = 0;
+
+    // Add stars dynamically
+    for (let i = 1; i <= 10; i++) {
+      const star = document.createElement("span");
+      star.classList.add("star");
+      star.setAttribute("data-rating", i);
+      star.innerHTML = "&#9733;"; // Star symbol
+
+      // Add event listener to stars
+      star.addEventListener("click", function () {
+        selectedRating = parseInt(this.getAttribute("data-rating"));
+        setRating(selectedRating);
+      });
+
+      ratingStarsContainer.appendChild(star);
+    }
+
+    // Function to set rating
+    function setRating(rating) {
+      for (let i = 1; i <= 10; i++) {
+        const star = ratingStarsContainer.querySelector(`[data-rating="${i}"]`);
+        star.classList.toggle("active", i <= rating);
+      }
+
+      // Set the rating value
+      ratingValue.textContent = `Rating: ${rating}`;
+    }
+  });
+</script>
+
+</body>
+</html>

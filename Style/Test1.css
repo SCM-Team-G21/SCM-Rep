@@ -142,6 +142,8 @@ body{
     background-color: white;
     position: sticky;
     z-index: 9;
+    width: 100%;
+    height: 100%;
 }
 
 .non ul {
@@ -150,12 +152,13 @@ body{
     height: 200px;
     list-style: none;
     position: absolute;
-    z-index: 5;
+    z-index: 9;
     background-color: white;
     display: none;
     box-shadow: 2px 1px 1px rgb(255, 220, 144);
     text-align: center;
     padding-right: 8px;
+    
 
 }
 
@@ -165,6 +168,7 @@ body{
 }
 #o1 a{
     text-decoration:  none;
+    position: sticky;
 }
 
 .non ul li {
@@ -175,6 +179,7 @@ body{
     padding-top: 5px;
     color: rgb(119, 90, 10);
     padding-left: 5px;
+    position: sticky;
  
 }
 .non ul li a{
@@ -186,12 +191,14 @@ body{
     color: rgb(119, 90, 10);
     padding-left: 5px;
     text-decoration: none;
+    position: sticky;
 
 }
 
 .non ul li:hover {
     font-size: 25px;
     cursor: pointer;
+    position: sticky;
 }
 
 #open1:hover,#open2:hover,#open3:hover,#open4:hover,#open5:hover {
@@ -1115,18 +1122,27 @@ footer {
 }
 .singlevideo{
     border: 2px 2px 2px 2px solid black;
-    width: 300px;
+    width: 45vh;
+    height: 30vh;
     margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
 
 }
-
 .allvideo{
-    display:inline-flex;
+    display:flex;
     flex-wrap:wrap;
-    /* justify-content:space-evenly; */
+    justify-content:space-evenly;
     /* overflow-x:auto; */
     width: auto;
 }
 .singlevideo h1{
-    font-size: 20px;
+    font-size: 20px;   
+    margin-top: -20px; 
+}
+ 
+#signInButton{
+    width: 100%;
+    border: none;
+    background-color: white;
 }
