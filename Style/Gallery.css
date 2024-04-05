@@ -52,13 +52,8 @@ img #a1:hover{
     opacity: 0.7;
     transform: scale(0.9);
 }
-.lightbox img {
-    display: block;
-    width: 80%;
-    height: 80%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin: auto;
-    margin-top: 6%;
+.hie{
+	left: 10%;
+	right: 20%;
+	margin: 10%;
 }
